@@ -1,0 +1,109 @@
+
+html{
+    border: 10px solid aliceblue;
+
+}
+body {
+    
+    background: linear-gradient(to right, rgb(1, 1, 69), rgb(25, 25, 112), rgb(4, 4, 76));
+    
+}
+h2{
+    
+    margin: 10px;
+}
+.validaCPF{
+    border: 3px solid gray; 
+    padding: 20px; 
+    margin: 10px; 
+    border-radius: 1%  ;
+    font-family: calibri;
+    color: black;
+    background-color: rgb(234, 211, 181);
+    max-width: 1000px
+}
+.removeCarc{
+    border: 3px solid gray; 
+    padding: 20px; 
+    margin: 10px; 
+    border-radius: 1%;
+    font-family: calibri;
+    color: black;
+    background-color: rgb(234, 211, 181);
+    max-width: 1000px
+}
+h1{
+    color: #FDB217;
+    margin-top: -0%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 5rem 5rem;
+    font-weight: lighter;
+    align-items: left;
+}
+.subTitulo{
+    font-family: calibri;
+    font-size: 2rem;
+    margin: -5rem 5rem;
+    font-weight: lighter;
+    color: aliceblue;
+    align-items: left;
+    margin-bottom: 20px;
+}
+.brutus{
+    align-items: end;
+    float: right;
+    width:20%; 
+    height: auto;
+    margin-top: -4%; 
+    margin-right: 5%;
+    
+    }
+    @keyframes piscar {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+
+    .brutus {
+        animation: piscar 5s infinite; /* 2s é a duração da animação, e "infinite" faz com que ela se repita indefinidamente */
+    }
+.tituloBox{
+    font-family: calibri;
+    color: aliceblue;
+
+}
+
+
+button{
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px; 
+    background-color: #FDB217;
+    color: black; 
+    border: none;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.resultado{
+    color: blue;
+}
+
+.copy{
+    font-family: Geneva;
+    color: greenyellow;
+}

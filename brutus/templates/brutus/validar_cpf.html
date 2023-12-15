@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de CPF</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <figure>
+            
+            <img class="brutus" src="{% static 'img/brutusRindo.png' %}" alt="Minha Imagem">
+
+        </figure>
+    </header>
+    <h1>Brutus App</h1>
+
+    <h2  class="subTitulo"> Valide CPF's / Remova os caracteres especiais do seu texto </h2><br>
+
+
+
+    <h2 class="tituloBox">Valide o CPF aqui:</h2>
+    <section  class="validaCPF">
+    <h2>Digite aqui:</h2>
+   
+    <form method="post" action="{% url 'validar_cpf' %}">
+        {% csrf_token %}
+        <label for="cpf"></label>
+        <input type="text" name="cpf" id="cpf" required>
+        <button type="submit">Validar CPF |  ▶</button>
+    </form>
+    
+    <h2>O CPF É: </h2>
+    {% if mensagem %}
+        <p class="resultado">{{ mensagem }}</p>
+    {% endif %}
+</section><br><br>
+<h2 class="tituloBox">Remova os caracteres especiais do seu texto aqui:</h2>
+<section class="removeCarc">
+    <h2>Digite seu texto aqui:</h2>
+   
+    <form method="post" action="{% url 'remove_caracteres_especiaiss' %}">
+        {% csrf_token %}
+        <label for="frase"></label>
+        <input type="text" name="fraseDig" id="fraseDig" required>
+        <button type="submit">Remover caracteres |  ▶</button>
+    </form>
+    <h2>Frase sem especiais: </h2>
+    <p class="resultado">{{ resultadoF }}</p>
+   
+    
+    
+</section><br>
+
+    <footer class="copy">
+        &copy;2023 - Daniel Alves / Rodrigo Xavier
+    </footer>
+</body>
+</html>
